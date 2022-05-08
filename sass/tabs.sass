@@ -1,0 +1,51 @@
+@import 'responsive'
+
+.tabs
+	&__wrap
+		display: flex
+		align-items: center
+		padding-top: 78px
+		border-bottom: 2px solid #0ba7eb
+
+	&__item
+		cursor: pointer
+		font-size: 20px
+		line-height: 1.2
+		color: #0ba7eb
+		text-transform: uppercase
+		padding: 0 30px
+		padding-bottom: 22px
+		+media(mdx)
+			font-size: 18px
+			padding: 0 15px
+			padding-bottom: 22px
+		+media(sm)
+			font-size: 17px
+			padding: 0 10px
+			padding-bottom: 18px
+		+media(xs)
+			font-size: 16px
+		&--active
+			color: #e0c109
+			position: relative
+			&:after
+				position: absolute
+				content: ' '
+				bottom: -2px
+				left: 0px
+				width: 100%
+				height: 2px
+				background-color: #ffda00
+
+	&__content
+		.tabs__box
+			&:first-child
+				max-width: 600px
+				width: 100%
+				padding-bottom: 20px
+				margin: 0 auto
+
+	&__box
+		padding-top: 100px
+		&:nth-child(2)
+			padding-top: 60px

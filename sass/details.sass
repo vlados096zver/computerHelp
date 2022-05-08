@@ -1,0 +1,105 @@
+@import 'responsive'
+
+.details
+	&__block
+		background-color: #f4f4f4
+		padding: 15px 0
+
+	&__holder
+		display: flex
+		align-items: center
+		justify-content: flex-end
+
+	&__email
+		font-size: 16px
+		line-height: 1.2
+		color: #0ba7eb
+		margin-right: 45px
+		transition: 0.25s color
+		&:hover
+			color: #e0c109
+
+	&__btn
+		display: block
+		cursor: pointer
+		max-width: 100px
+		width: 100%
+		font-size: 14px
+		color: #0ba7eb
+		border: 2px solid #0ba7eb
+		border-radius: 10px
+		padding: 10px 5px
+		background-color: transparent
+		text-align: center
+		font-weight: 700
+		font-family: "OpenSans"
+		transition: 0.25s background-color, 0.25s color
+		&:hover
+			background-color: #0ba7eb
+			color: #fff
+
+	&__table
+		overflow: hidden
+		overflow-x: auto
+		margin-bottom: 64px
+
+	&__row
+		display: flex
+		&:first-child
+			border-top: 1px solid #cccccc
+
+	&__item
+		display: flex
+		align-items: center
+		border-bottom: 1px solid #cccccc
+		padding: 37px 0
+		padding-right: 15px
+		&:first-child
+			min-width: 200px
+			max-width: 120px
+			padding-left: 20px
+
+		&:nth-child(2)
+			min-width: 188px
+			max-width: 370px
+			width: 100%
+			padding-right: 20px
+
+		&:nth-child(3)
+			min-width: 170px
+			max-width: 120px
+
+		&:nth-child(4)
+			min-width: 185px
+			max-width: 145px
+
+		&:nth-child(5)
+			min-width: 160px
+			max-width: 150px
+
+		&:nth-child(6)
+			min-width: 147px
+			max-width: 147px
+			padding-right: 20px
+
+	&__col
+		font-size: 18px
+		line-height: 1.4
+		color: #000000
+
+	&__status		
+		display: block	
+		max-width: 150px
+		width: 100%	
+		font-size: 14px	
+		color: #63bb91
+		background-color: #beeed7
+		text-align: center
+		text-transform: uppercase	
+		border-radius: 20px
+		padding: 5px	
+		font-weight: 700
+
+		&--nopay
+			background-color: #eacece
+			color: #ce4545

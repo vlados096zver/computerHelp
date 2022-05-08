@@ -1,0 +1,98 @@
+@import 'responsive'
+
+body
+	margin: 0
+	padding: 0
+	width: 100%
+	min-height: 100vh
+	overflow-x: hidden
+	color: #000000
+	background-color: #fff
+	text-size-adjust: none
+	-webkit-text-size-adjust: none
+	-ms-text-size-adjust: none
+	font-size: 16px
+	line-height: 1.2
+	font-weight: normal
+	font-style: normal
+	font-family: "OpenSans"
+
+*
+	box-sizing: border-box
+
+img
+	max-width: 100%
+	height: auto
+
+.container
+	max-width: 430px
+	width: 100%
+	margin: 0 auto
+	padding: 0 15px
+	&--inner
+		max-width: 1230px
+
+
+.page-user
+	display: flex	
+	align-items: center
+	justify-content: center
+	padding: 25px 0px 
+
+.label
+	cursor: pointer
+	display: inline-block
+	font-size: 20px	
+	line-height: 1.2	
+	color: #000000
+	margin-bottom: 12px
+
+.input
+	display: block	
+	width: 100%
+	background-color: #fbfbfb
+	border: 1px solid #d3d3d3
+	border-radius: 4px
+	outline: none
+	padding: 13px 15px
+	+media(sm)
+		padding: 8px 15px
+
+	&.form-fail
+		border-color: #ff0000
+
+.btn
+	display: block	
+	width: 100%
+	font-size: 20px
+	line-height: 1.2
+	color: #333333
+	background-color: #ffda00
+	box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.15)
+	border: none
+	border-radius: 4px
+	outline: none
+	padding: 23px 10px 
+	margin-bottom: 36px
+	text-align: center
+	font-weight: 700
+	font-family: "OpenSans"
+	transition: 0.25s background-color, 0.25s color
+	+media(sm)
+		padding: 14px 15px
+	&:disabled
+		text-decoration: line-through
+
+	&:hover:not(:disabled)
+		cursor: pointer
+		background-color: #0ba7eb
+		color: #fff
+
+	&--inner
+		max-width: 380px
+		width: 100%
+		margin: 0px auto
+
+.error
+	color: #ff0000
+	padding-top: 12px
