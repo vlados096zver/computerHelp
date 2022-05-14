@@ -579,6 +579,12 @@ img {
 	padding: 0 0 12px;
 }
 
+.user__msg {
+	color: #090;
+	padding: 0 0 20px;
+	font-weight: 700;
+}
+
 .details__block {
 	background-color: #f4f4f4;
 	padding: 15px 0;
@@ -780,7 +786,7 @@ img {
 
 .info__title {
 	font-size: 64px;
-	line-height: 1.2;
+	line-height: 1.35;
 	color: #fff;
 	text-transform: uppercase;
 	padding-bottom: 80px;
@@ -807,7 +813,6 @@ img {
 	height: 100%;
 	display: flex;
 	flex-direction: column;
-	background-color: #fff;
 }
 
 .services__holder {
@@ -827,6 +832,8 @@ img {
 .services__item {
 	display: flex;
 	flex-direction: column;
+	background-color: #fff;
+	border-radius: 8px 8px 10px 10px;
 }
 
 .services__item:hover .services__details {
@@ -836,7 +843,6 @@ img {
 .services__image img {
 	display: block;
 	width: 100%;
-	border-radius: 8px 8px 0px 0px;
 }
 
 .services__title {
@@ -1131,11 +1137,12 @@ img {
 	color: #333333;
 	text-align: center;
 	padding-bottom: 5px;
+	font-weight: 300;
 }
 
 .cost__elem {
 	font-size: 20px;
-	line-height: 1.2;
+	line-height: 1.6;
 	color: #333333;
 	text-transform: uppercase;
 	text-align: center;
@@ -1152,7 +1159,7 @@ img {
 
 .cost__text p {
 	font-size: 20px;
-	line-height: 1.5;
+	line-height: 1.6;
 	color: #7a7a7a;
 	text-align: center;
 }
@@ -1194,7 +1201,7 @@ img {
 	color: #000000;
 	text-transform: uppercase;
 	text-align: center;
-	font-weight: normal;
+	font-weight: 300;
 }
 
 .reviews {
@@ -1232,7 +1239,7 @@ img {
 
 .reviews__title {
 	font-size: 16px;
-	line-height: 1.2;
+	line-height: 1.35;
 	color: #1996cd;
 	padding-bottom: 12px;
 	text-align: center;
@@ -1241,7 +1248,7 @@ img {
 
 .reviews__position {
 	font-size: 16px;
-	line-height: 1.2;
+	line-height: 1.35;
 	color: #333333;
 	text-align: center;
 	padding-bottom: 48px;
@@ -1300,6 +1307,7 @@ img {
 	line-height: 1.35;
 	color: #fff;
 	text-align: center;
+	font-weight: 300;
 }
 
 .banner .btn {
@@ -1324,10 +1332,11 @@ img {
 	border-radius: 10px;
 	margin: 0 20px;
 	margin-bottom: 54px;
+	transition: 0.25s box-shadow;
 }
 
-.blog__item:hover .blog__details {
-	color: #43be66;
+.blog__item:hover {
+	box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.15);
 }
 
 .blog__image img {
@@ -1357,6 +1366,7 @@ img {
 	font-size: 16px;
 	line-height: 1.2;
 	color: #7a7a7a;
+	text-transform: uppercase;
 }
 
 .blog__details {
@@ -1430,6 +1440,10 @@ img {
 
 .footer__phone {
 	display: block;
+	background-image: url(../img/icons/phone.svg);
+	background-size: 20px;
+	background-repeat: no-repeat;
+	background-position: left 20px center;
 	width: max-content;
 	font-size: 13px;
 	line-height: 1.2;
@@ -1663,7 +1677,7 @@ img {
 }
 
 .help {
-	padding-bottom: 80px;
+	padding-bottom: 75px;
 }
 
 .help__wrap {
@@ -1753,6 +1767,18 @@ img {
 
 .block__text p {
 	font-size: 28px;
+}
+
+.reviews {
+	padding-bottom: 70px;
+}
+
+.reviews__wrap {
+	padding-top: 70px;
+}
+
+.reviews__item {
+	padding: 30px 20px;
 }
 
 .banner__text p {
@@ -1872,6 +1898,10 @@ img {
 	font-size: 30px;
 }
 
+.reviews__wrap {
+	max-width: 500px;
+}
+
 .blog__wrap {
 	margin: 0px;
 }
@@ -1923,7 +1953,7 @@ img {
 	display: flex;
 	width: 100%;
 	padding: 7px 0px;
-	padding-bottom: 8px;
+	padding-bottom: 15px;
 }
 
 .main-nav__toggle {

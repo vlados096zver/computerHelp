@@ -19,6 +19,7 @@
 		border-radius: 10px
 		margin: 0 20px
 		margin-bottom: 54px	
+		transition: 0.25s box-shadow
 		+media(mdx)
 			width: calc(100% / 2 - 40px)
 		+media(sm)
@@ -28,8 +29,7 @@
 			margin-bottom: 40px	
 
 		&:hover
-			.blog__details
-				color: #43be66
+			box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.15)
 
 	&__image
 		img
@@ -57,6 +57,7 @@
 		font-size: 16px
 		line-height: 1.2
 		color: #7a7a7a
+		text-transform: uppercase
 
 	&__details
 		cursor: pointer

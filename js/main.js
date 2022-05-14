@@ -439,7 +439,7 @@ $(document).ready(function() {
         0: {
           slidesPerView: 1,
         },
-        480: {
+        767: {
           slidesPerView: 2,
         },
         1023: {
@@ -467,8 +467,6 @@ $(document).ready(function() {
 
   function fixContrastBg() {
 
-    console.log($intersection.offset().top);
-
     if ($intersection.offset().top < $(window).scrollTop()) {
       $fixedMenu.addClass("contrast-bg");
 
@@ -486,5 +484,13 @@ $(document).ready(function() {
     $('.add').slideToggle(250);
   })
 
+   $(document).on('click', '.reviews__details', function(e) {
+      e.preventDefault();
+      $('.popup--text').addClass('popup--active');
+      let parent = $(this).parents('.reviews__item');
+      let desc = parent.find('.reviews__text p').text();
+      console.log(desc);
+       $('.popup__text p').text(desc);
+   })
 
 })

@@ -13,6 +13,19 @@
 
 @font-face {
     font-family: "OpenSans";
+    src: url("OpenSansLight.eot");
+    src: url("OpenSansLight.eot?#iefix") format("embedded-opentype"),
+    url("OpenSansLight.woff2") format("woff2"),
+    url("OpenSansLight.woff") format("woff"),
+    url("OpenSansLight.ttf") format("truetype"),
+    url('OpenSansLight.svg') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "OpenSans";
     src: url("OpenSansBold.eot");
     src: url("OpenSansBold.eot?#iefix") format("embedded-opentype"),
     url("OpenSansBold.woff2") format("woff2"),
