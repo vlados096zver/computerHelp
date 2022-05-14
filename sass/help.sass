@@ -1,0 +1,72 @@
+@import 'responsive'
+
+.help
+	background-color: #0ba7eb
+	padding-top: 80px
+	padding-bottom: 130px
+	counter-reset: list_help
+	+media(mdx)
+		padding-bottom: 80px
+	&__wrap
+		display: flex
+		flex-wrap: wrap
+		padding-top: 120px
+		margin: 0 -10px
+		+media(mdx)
+			padding-top: 80px
+			margin: 0px	
+
+	&__item
+		position: relative
+		width: calc(100% / 3 - 20px)
+		padding-left: 100px
+		margin: 0 10px
+		margin-bottom: 50px
+		+media(lgs)
+			padding-left: 65px
+		+media(mdx)
+			width: 100%	
+			padding-left: 45px
+			margin: 0px	
+			margin-bottom: 40px	
+
+		&:after
+			position: absolute
+			counter-increment: list_help
+			content: counter(list_help)
+			top: 0px
+			left: 0px
+			width: 100px
+			font-size: 70px
+			color: #fff
+			text-align: center
+			font-weight: 800
+			+media(lgs)
+				width: 65px
+				font-size: 65px
+			+media(mdx)
+				width: 45px
+				font-size: 40px
+			
+	&__title
+		font-size: 32px
+		line-height: 1.15
+		color: #fff
+		padding-bottom: 34px
+		font-weight: 700
+		+media(lgs)
+			font-size: 30px
+		+media(mdx)
+			font-size: 26px	
+
+	&__text
+		p
+			font-size: 20px
+			line-height: 1.6
+			color: #fff
+			+media(mdx)
+				font-size: 18px	
+
+	.btn
+		&:hover
+			background-color: #43be66

@@ -25,13 +25,32 @@ img
 	height: auto
 
 .container
-	max-width: 430px
+	max-width: 440px
 	width: 100%
 	margin: 0 auto
-	padding: 0 15px
+	padding: 0 20px
 	&--inner
-		max-width: 1230px
+		max-width: 1240px
 
+	&--block
+		max-width: 1600px
+
+	&--elem
+		max-width: 1400px
+
+	&--services,
+	&--reviews
+		padding: 0 100px
+		+media(lg)
+			padding: 0 62px
+		+media(sm)
+			padding: 0px 20px	
+
+	&--services
+		max-width: 1700px
+
+	&--reviews
+		max-width: 1380px
 
 .page-user
 	display: flex	
@@ -93,6 +112,113 @@ img
 		width: 100%
 		margin: 0px auto
 
+	&--info
+		max-width: 305px
+
+	&--help
+		max-width: 320px
+		margin-left: auto
+
+	&--pay
+		max-width: 250px
+		margin: 0 auto
+		margin-bottom: 40px
+
+	&--add
+		width: 300px
+		background-color: #0ba7eb
+		color: #fff
+		border-radius: 10px
+		margin-bottom: 0px
+		+media(mdx)
+			width: 100%
+			max-width: 300px
+		&:hover:not(:disabled)
+			background-color: #43be66
+
+
 .error
 	color: #ff0000
 	padding-top: 12px
+
+.title
+	font-size: 64px
+	line-height: 1.2
+	color: #fff
+	text-transform: uppercase
+	font-weight: 800
+	+media(mdx)
+		font-size: 45px
+	+media(sm)
+		font-size: 25px
+	&--inner
+		color: #333333
+
+.swiper-pagination
+	position: static
+	display: flex
+	justify-content: center
+
+.swiper-pagination-bullet
+	display: block
+	width: 16px
+	height: 16px
+	opacity: 1
+	border-radius: 10px
+	&.swiper-pagination-bullet-active
+
+.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, 
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet
+	margin: 0 7px
+
+.swiper-horizontal>.swiper-pagination-bullets, 
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction
+	bottom: 0px
+
+.swiper-button-prev, 
+.swiper-button-next
+	+media(sm)
+		display: none	
+	svg
+		display: block	
+		width: 40px	
+		height: 40px	
+	&:after
+		display: none
+
+.swiper-button-prev
+	left: -70px
+	+media(lg)
+		left: -45px
+
+.swiper-button-next
+	transform: scale(-1)
+	right: -70px
+	+media(lg)
+		right: -45px
+
+.services__holder
+	.swiper-button-prev, 
+	.swiper-button-next
+		svg
+			fill: #fff
+
+	.swiper-pagination-bullet
+		background-color: transparent
+		border: 2px solid #fff
+		&.swiper-pagination-bullet-active
+			background-color: #fff
+
+.reviews__holder
+	.swiper-button-prev, 
+	.swiper-button-next
+		svg
+			fill: #1996cd
+
+	.swiper-pagination-bullet
+		background-color: transparent
+		border: 2px solid #1996cd
+		&.swiper-pagination-bullet-active
+			background-color: #1996cd

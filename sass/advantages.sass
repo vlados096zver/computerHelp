@@ -1,0 +1,77 @@
+@import 'responsive'
+
+.advantages
+	background-color: #fafafa
+	padding-top: 80px
+	padding-bottom: 100px	
+	+media(mdx)
+		padding-bottom: 70px	
+
+	.title--inner
+		max-width: 1000px
+	&__wrap
+		display: flex
+		flex-wrap: wrap
+		padding-top: 110px
+		+media(mdx)
+			padding-top: 75px	
+
+	&__item
+		width: 50%
+		+media(mdx)
+			width: 100%
+		&:first-child
+			padding-right: 20px
+			+media(mdx)
+				padding-right: 0px
+				padding-bottom: 40px	
+
+	&__text
+		padding-bottom: 35px
+		p
+			font-size: 20px
+			line-height: 1.6
+			color: #333333
+			+media(mdx)
+				font-size: 18px
+			&:not(:last-child)
+				padding-bottom: 1.5em
+
+	&__box
+		display: flex
+		align-items: center
+		margin-bottom: 30px
+
+	&__image
+		width: 60px
+		height: 60px
+		display: flex
+		align-items: center
+		justify-content: center
+		background-color: rgba(11, 167, 235, 0.58)
+		border-radius: 10px
+
+	&__elem
+		width: calc(100% - 60px)
+		font-size: 20px
+		line-height: 1.2
+		color: #333333
+		padding-left: 22px
+		font-weight: 700
+		+media(mdx)
+			font-size: 17px	
+
+	.user__form
+		max-width: 500px
+		margin-left: auto
+		+media(mdx)
+			margin: 0 auto
+
+	.user__title
+		font-size: 32px
+		line-height: 1.5
+		text-align: center
+		margin-bottom: 50px
+		+media(mdx)
+			font-size: 26px
+			line-height: 1.25

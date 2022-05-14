@@ -1,0 +1,29 @@
+@import 'responsive'
+
+.add
+	position: fixed
+	bottom: 0px
+	left: 0px
+	width: 100%
+	z-index: 12
+	background-color: #ffda00
+	&__inner
+		display: flex
+		align-items: center
+		padding: 65px 0
+		+media(mdx)
+			padding: 40px 0
+			display: block
+
+	&__text
+		width: calc(100% - 300px)
+		padding-right: 66px
+		+media(mdx)
+			padding-right: 0px
+			padding: 0px
+			padding-bottom: 25px
+			width: 100%
+		p
+			font-size: 16px
+			line-height: 1.2
+			color: #000000

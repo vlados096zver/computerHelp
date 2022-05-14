@@ -101,8 +101,6 @@ function checkCoincidenceInput(elem1, elem2, error) {
     })
   }
 
-$('input[type="tel"]').mask("+38 (999) 999-99-99");
-
 var regName = /^[a-zA-Zа-яА-ЯёЁIi]+/;
 var regEmail = /[-.\w]+@[-.\w]+\.[-.\w]+/i;
 var regPhone = /[_]/i;
@@ -341,11 +339,151 @@ validate('#u_email', 1, regEmail, '.user__error--email');
 validate('#u_fio', 1, regName, '.user__error--fio');
 disBtn('#u_email, #u_fio', '#u_save');
 
+// consult
+
+$('#u_consult').on('click', function () {
+    formConsult();
+});
+
+function formConsult() {
+    let name = $('#u_name').val();
+    let phone = $('#u_phone').val();
+
+    validate('#u_name', 1, regName, '.user__error--name');
+    validate('#u_phone', 1, regName, '.user__error--phone');
+    disBtn('#u_name , #u_phone', '#u_consult');
+
+    valClick('#u_name', 1,  regName, '.user__error--name');
+    valClick('#u_phone', 1, regName, '.user__error--phone');
+    let btn_bool = disBtnClick('#u_name, #u_phone', '#u_consult');
+
+      if (btn_bool) {
+        $.ajax({
+            url: myajax.url,
+            type: 'POST',
+            data: {
+                action: 'consult',
+                name: name,
+                phone: phone
+            },
+        }).done(function (data) {
+            $('#u_name, #u_phone').val('').removeClass('form-done');
+            var text = 'Ваше  cообщение отправлено!';
+            
+            $('.msg-modal').html(text).addClass('msg-modal-active');
+            setTimeout(function () {
+                $('.msg-modal').removeClass('msg-modal-active');
+            }, 2500);
+        });
+
+    }
+
+    return false;
+}
+
+  validate('#u_name', 1, regName, '.user__error--name');
+  validate('#u_phone', 1, regName, '.user__error--phone');
+  disBtn('#u_name , #u_phone', '#u_consult');
+
   $(".tabs__item").click(function() {
     $(".tabs__item").removeClass("tabs__item--active").eq($(this).index()).addClass("tabs__item--active");
     var index = $(this).index();
     $(".tabs__box").hide().eq(index).fadeIn()
   })
 
+    if (window.Swiper) {
+
+         let services_swiper = new Swiper(".services__wrap", {
+          slidesPerView: 1,
+          spaceBetween: 24,
+          pagination: {
+            clickable: true,
+            el: ".services__holder .swiper-pagination",
+          },
+          navigation: {
+            nextEl: ".services__holder .swiper-button-next",
+            prevEl: ".services__holder .swiper-button-prev",
+          },
+          allowTouchMove: true,
+          loop: false,
+         breakpoints: {
+            0: {
+              slidesPerView: 1,
+            },
+            650: {
+              slidesPerView: 2,
+            },
+            1023: {
+              slidesPerView: 3,
+            },
+            1250: {
+              slidesPerView: 4,
+            },
+          }
+        });
+
+        let reviews_swiper = new Swiper(".reviews__wrap", {
+          slidesPerView: 1,
+          spaceBetween: 24,
+          pagination: {
+            clickable: true,
+            el: ".reviews__holder .swiper-pagination",
+          },
+          navigation: {
+            nextEl: ".reviews__holder .swiper-button-next",
+            prevEl: ".reviews__holder .swiper-button-prev",
+          },
+          allowTouchMove: true,
+          loop: false,
+         breakpoints: {
+            0: {
+              slidesPerView: 1,
+            },
+            480: {
+              slidesPerView: 2,
+            },
+            1023: {
+              slidesPerView: 3,
+            },
+          }
+        });
+
+    }
+
+    $('.mobile-wrap').on('click', function () {
+    $('.line-burger').toggleClass('line-active');
+    $('.main-header__list').slideToggle();
+});
+
+$(window).resize(function () {
+    if ($(document).width() > 780) {
+        $('.main-header__list').attr('style', '');
+        $('.line-burger').removeClass('line-active');
+    }
+})
+
+    var $intersection = $(".js-intersection");
+    var $fixedMenu = $('.main-header')
+
+  function fixContrastBg() {
+
+    console.log($intersection.offset().top);
+
+      if ($intersection.offset().top < $(window).scrollTop()) {
+        $fixedMenu.addClass("contrast-bg");
+
+      } else {
+        $fixedMenu.removeClass("contrast-bg");
+      }
+    }
+
+     fixContrastBg()
+    $(window).scroll(function() {
+      fixContrastBg()
+    });
+
+    $('.btn--add').on('click', function(){
+        $('.add').slideToggle(250);
+    })
 
 })

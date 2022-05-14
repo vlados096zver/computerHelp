@@ -1,0 +1,112 @@
+@import 'responsive'
+
+.footer
+	background-color: #333333
+	padding-top: 52px
+	padding-bottom: 42px
+	&__wrap
+		display: flex
+		+media(mdx)
+			flex-direction: column
+
+	&__block
+		margin-right: auto
+		+media(mdx)
+			margin: 0 auto
+			margin-bottom: 40px	
+
+	&__image
+		display: block
+		max-width: 120px
+		width: 100%
+		margin-bottom: 65px
+		+media(mdx)
+			margin: 0 auto
+			margin-bottom: 40px	
+		img
+			display: block
+
+	&__partners
+		display: flex
+		align-items: center
+
+	&__list
+		max-width: 454px
+		column-count: 2
+		+media(mdx)
+			margin: 0 auto
+			margin-bottom: 35px
+		+media(xxs)
+				column-count: 1
+
+	&__link
+		display: block
+		font-size: 13px
+		line-height: 1.2
+		color: #fff
+		margin-bottom: 20px
+		transition: 0.25s color
+		&:hover
+			color: #ffda00
+
+	&__holder
+		padding-left: 40px
+
+	&__phone
+		display: block
+		width: max-content
+		font-size: 13px
+		line-height: 1.2
+		color: #fff
+		background-color: #43be66
+		border-radius: 20px
+		padding: 8px 12px
+		padding-left: 50px
+		margin-left:  auto
+		margin-bottom: 5px
+		transition: 0.25s background-color
+		+media(mdx)
+			margin: 0 auto
+			margin-bottom: 15px
+		&:hover
+			background-color: #0ba7eb
+
+	&__text
+		display: block
+		width: max-content
+		font-size: 13px
+		line-height: 1.2
+		color: #fff
+		text-align: center
+		text-transform: uppercase
+		margin-left: auto
+		margin-bottom: 25px
+		font-weight: 700
+		transition: 0.25s color
+		+media(mdx)
+			margin: 0 auto
+			margin-bottom: 20px	
+		&:hover
+			color: #ffda00
+
+	&__info
+		font-size: 13px
+		line-height: 1.2
+		color: #fff
+		text-align: right
+		margin-bottom: 20px
+		+media(mdx)
+			text-align: center
+
+	&__email
+		display: block
+		width: max-content
+		font-size: 13px
+		line-height: 1.2
+		color: #fff
+		margin-left: auto
+		transition: 0.25s color
+		+media(mdx)
+			margin: 0 auto
+		&:hover
+			color: #ffda00

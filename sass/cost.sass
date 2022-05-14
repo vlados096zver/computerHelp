@@ -1,0 +1,94 @@
+@import 'responsive'
+
+.cost
+	background-color: #0ba7eb
+	padding-top: 80px
+	padding-bottom: 340px
+	+media(mdx)
+		padding-bottom: 250px
+	&__wrap
+		display: flex
+		flex-wrap: wrap
+		padding-top: 100px
+		margin: 0 -30px
+		+media(lgm)
+			margin: 0 -20px
+		+media(mdx)
+			margin: 0
+
+
+	&__item
+		display: block
+		cursor: pointer
+		width: calc(100% / 3 - 60px)
+		background-color: #ffffff
+		box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.15)
+		border-radius: 20px
+		padding: 20px 30px
+		padding-bottom: 190px
+		margin: 0 30px
+		margin-bottom: 60px
+		transition: 0.25s background-color
+		+media(lgm)
+			width: calc(100% / 3 - 40px)
+			padding: 20px
+			margin: 0 20px
+		+media(mdx)
+			width: 100%
+			max-width: 600px
+			padding-bottom: 80px
+			margin: 0px auto
+			margin-bottom: 40px
+		&:hover
+			background-color: #ffda00
+			.btn
+				background-color: #fff
+				color: #333333
+
+			.cost__text p
+				color: #333
+
+		ul
+			li
+				position: relative
+				font-size: 20px
+				line-height: 1.2
+				color: #7a7a7a
+				padding-left: 30px
+				margin-bottom: 10px
+				&:after
+					position: absolute
+					content: ' '
+					top: 8px
+					left: 0px
+					width: 8px
+					height: 8px
+					border-radius: 4px
+					background: #0ba7eb
+
+	&__title
+		font-size: 100px
+		line-height: 1.2
+		color: #333333
+		text-align: center
+		padding-bottom: 5px
+
+	&__elem
+		font-size: 20px
+		line-height: 1.2
+		color: #333333
+		text-transform: uppercase
+		text-align: center
+		padding-bottom: 15px
+		font-weight: 800
+
+	&__text
+		max-width: 280px
+		padding: 0 20px
+		padding-bottom: 20px
+		margin: 0 auto
+		p
+			font-size: 20px
+			line-height: 1.5
+			color: #7a7a7a
+			text-align: center
