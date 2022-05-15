@@ -12,9 +12,22 @@
 	+media(lgs)
 		position: static
 		background-color: rgba(0, 0, 0, 0.9)
+	+media(smx)
+		background-color: rgba(0, 0, 0, 1)
+		padding-bottom: 0px
+
 	&.contrast-bg
 		background-color: rgba(0, 0, 0, 0.9)
 		padding: 22px 0	
+		+media(xxs)
+			background-color: rgba(0, 0, 0, 1)
+
+	&--inner
+		position: static
+		background-color: rgba(0, 0, 0, 0.9)
+		+media(xxs)
+			background-color: rgba(0, 0, 0, 1)
+
 
 	&__block
 		display: flex	
@@ -81,7 +94,7 @@
 			overflow-y: auto
 			overflow-x: hidden
 			padding: 15px 20px
-			background-color: rgba(0, 0, 0, 0.9)
+			background-color: rgba(0, 0, 0, 1)
 		li
 			&:not(:last-child)
 				margin-right: 30px
@@ -121,7 +134,7 @@
 		display: flex
 		width: 100%
 		padding: 7px 0px
-		padding-bottom: 15px
+		padding-bottom: 20px
 
 .line-burger
 	display: block

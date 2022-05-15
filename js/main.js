@@ -456,7 +456,7 @@ $(document).ready(function() {
   });
 
   $(window).resize(function() {
-    if ($(document).width() > 780) {
+    if ($(document).width() > 650) {
       $('.main-header__list').attr('style', '');
       $('.line-burger').removeClass('line-active');
     }
@@ -467,11 +467,13 @@ $(document).ready(function() {
 
   function fixContrastBg() {
 
-    if ($intersection.offset().top < $(window).scrollTop()) {
-      $fixedMenu.addClass("contrast-bg");
+    if($intersection.length>0) {
+      if ($intersection.offset().top < $(window).scrollTop()) {
+        $fixedMenu.addClass("contrast-bg");
 
-    } else {
-      $fixedMenu.removeClass("contrast-bg");
+        } else {
+          $fixedMenu.removeClass("contrast-bg");
+      }
     }
   }
 
@@ -484,13 +486,62 @@ $(document).ready(function() {
     $('.add').slideToggle(250);
   })
 
-   $(document).on('click', '.reviews__details', function(e) {
-      e.preventDefault();
-      $('.popup--text').addClass('popup--active');
-      let parent = $(this).parents('.reviews__item');
-      let desc = parent.find('.reviews__text p').text();
-      console.log(desc);
-       $('.popup__text p').text(desc);
-   })
+  // Filter blog
+
+  $(document).on('click', '.blog__col', function(e) {
+    let filterData = e.target.dataset.filter;
+    let check = filterData;
+        $('.blog__col').removeClass('blog__col--active');
+
+    $(this).addClass('blog__col--active');
+
+    $('.blog__item').each(function(index, item) {
+      if ($(item)[0].dataset.filter == check || filterData == "all") {
+        $(item).show();
+      } else {
+        $(item).hide();
+      }
+    })
+
+  })
+
+  function checkAddButtonReviews() {
+
+    
+    let tabsWidth = 0;
+     $('.blog__col').each(function(index, item) {
+      tabsWidth += $(item).outerWidth(true);
+     })
+
+    let screenWidth = $('.blog__row').outerWidth(true);
+    if(tabsWidth >=screenWidth) {
+      $('.blog__tabs').addClass('blog__gradient');
+       $('.blog__btn').attr('style', '');
+    } else {
+       $('.blog__tabs').removeClass('blog__gradient');
+    }
+  }
+
+  checkAddButtonReviews();
+
+   $(document).on('load', checkAddButtonReviews);
+    $(document).on('resize', checkAddButtonReviews)
+
+  $(document).on('click', '.blog__btn', function(e) {
+    $(this).hide();
+      $('.blog__tabs').addClass('blog__tabs--show').removeClass('blog__gradient');
+  })
+  
+  // reviews popup
+
+  $(document).on('click', '.reviews__details', function(e) {
+    e.preventDefault();
+    $('.popup--text').addClass('popup--active');
+    let parent = $(this).parents('.reviews__item');
+    let desc = parent.find('.reviews__text p').text();
+    console.log(desc);
+    $('.popup__text p').text(desc);
+  })
+
 
 })

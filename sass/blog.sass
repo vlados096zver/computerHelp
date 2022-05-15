@@ -4,6 +4,11 @@
 	padding: 100px 0
 	+media(mdx)
 		padding: 70px 0
+
+	&--page
+		padding-top: 74px
+		padding-bottom: 54px
+
 	&__wrap
 		display: flex
 		flex-wrap: wrap
@@ -13,12 +18,13 @@
 			margin: 0px
 
 	&__item
+		display: block
 		width: calc(100% / 3 - 40px)
 		background-color: #ffffff
 		border: 1px solid #d3d3d3
 		border-radius: 10px
 		margin: 0 20px
-		margin-bottom: 54px	
+		margin-bottom: 50px	
 		transition: 0.25s box-shadow
 		+media(mdx)
 			width: calc(100% / 2 - 40px)
@@ -73,3 +79,110 @@
 
 	.btn--info
 		margin: 0 auto
+
+	&__row
+		display: flex
+		align-items: center
+		margin-top: 50px
+		&+.blog__wrap
+			padding-top: 50px
+
+	&__tabs
+		display: flex
+		flex-wrap: wrap
+		align-items: center
+		height: 40px
+		overflow: hidden
+		position: relative
+		&--show
+			height: auto
+			overflow: visible
+
+	&__gradient
+		width: calc(100% - 126px)
+		&:after
+			position: absolute
+			content: ' '
+			top: 0px
+			right: 0px
+			width: 200px
+			height: 40px
+			background: linear-gradient(270deg, #FAFAFA 37.1%, rgba(250, 250, 250, 0) 151.61%)
+
+	&__nowrap
+		&:after
+			background-image: none
+
+	&__col
+		cursor: pointer
+		display: block
+		font-size: 14px
+		line-height: 1.2
+		color: #0ba7eb
+		border: 2px solid #0ba7eb
+		border-radius: 10px
+		padding: 10px 17px
+		padding-bottom: 9px
+		margin-bottom: 15px
+		margin-right: 18px
+		transition: 0.25s background-color, 0.25s color, 0.25s border
+		&:hover:not(.blog__col--active)
+			background-color: #43be66
+			border-color: #43be66
+			color: #fff
+
+		&--active
+			color: #fff
+			background-color: #0ba7eb
+
+	&__btn
+		cursor: pointer
+		display: block
+		font-size: 14px
+		line-height: 1.2
+		width: 126px	
+		background-color: #1996cd
+		color: #fff
+		outline: none
+		border: 2px solid #1996cd
+		border-radius: 10px
+		padding: 10px 5px
+		padding-bottom: 9px
+		font-family: "OpenSans"
+		transition: 0.25s background-color, 0.25s border
+		&:hover
+			background-color: #43be66
+			border-color: #43be66
+
+.navigation
+	padding-top: 28px
+	.nav-links
+		display: flex
+		flex-wrap: wrap
+		align-items: center
+		justify-content: center
+
+	.page-numbers
+		cursor: pointer
+		display: flex
+		align-items: center
+		justify-content: center
+		width: 40px
+		height: 40px
+		color: #0ba7eb
+		border-radius: 20px
+		font-size: 16px
+		line-height: 1.2
+		color: #0ba7eb
+		border: 2px solid #0ba7eb
+		margin-left: 20px
+		margin-bottom: 16px
+		font-weight: 700
+		transition: 0.25s background-color, 0.25s color, 0.25s border
+		&.current
+			color: #fff
+			background-color: #0ba7eb
+		&:hover:not(.current)
+			background-color: #43be66
+			color: #fff
+			border-color: #43be66

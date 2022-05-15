@@ -7,7 +7,7 @@ body
 	min-height: 100vh
 	overflow-x: hidden
 	color: #000000
-	background-color: #fff
+	background: #fafafa
 	text-size-adjust: none
 	-webkit-text-size-adjust: none
 	-ms-text-size-adjust: none
@@ -136,6 +136,14 @@ img
 		&:hover:not(:disabled)
 			background-color: #43be66
 
+	&--blog
+		max-width: 380px
+		background-color: #0ba7eb
+		color: #fff
+		margin: 0 auto
+		margin-bottom: 25px
+		&:hover:not(:disabled)
+			background-color: #43be66
 
 .error
 	color: #ff0000
@@ -222,3 +230,36 @@ img
 		border: 2px solid #1996cd
 		&.swiper-pagination-bullet-active
 			background-color: #1996cd
+
+
+.breadcrumbs
+	&__list
+		display: flex	
+		flex-wrap: wrap
+		align-items: center
+		padding-bottom: 25px
+		li
+			display: block
+			cursor: default
+			margin-bottom: 17px
+			&:not(:last-child)
+				margin-right: 20px
+				transition: 0.3s color
+				position: relative
+				&:after
+					position: relative
+					right: -10px
+					content: '|'
+					color: #adadad
+
+
+		li, a
+			font-size: 14px
+			line-height: 1.2
+			color: #adadad
+			text-transform: uppercase
+			transition: 0.25s color
+
+		a
+			&:hover
+				color: #333
