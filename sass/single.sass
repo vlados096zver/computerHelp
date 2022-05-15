@@ -11,11 +11,21 @@
 	.blog__wrap
 		padding-top: 0px
 
+	&--inner
+		.title
+			padding-bottom: 80px
+			+media(mdx)
+				padding-bottom: 50px
+
 	&__title
 		font-size: 64px
 		line-height: 1.2
 		padding-bottom: 40px
 		font-weight: 700
+		+media(mdx)
+			font-size: 48px
+		+media(sm)
+			font-size: 35px
 
 	&__image
 		margin-bottom: 46px
@@ -29,6 +39,11 @@
 			line-height: 1.45
 			color: #000000
 			padding-bottom: 1em
+			+media(mdx)
+				font-size: 25px
+				padding-bottom: 1.2em
+			+media(sm)
+				font-size: 18px
 
 		hr
 			display: block
@@ -47,10 +62,17 @@
 		padding-bottom: 24px
 		border-bottom: 2px solid #0c8ac1
 		margin-bottom: 65px
+		+media(mdx)
+			padding-bottom: 5px
+			margin-bottom: 45px
+		+media(smx)
+			flex-direction: column
 		.btn
 			max-width: 308px
 			&:not(:last-child)
 				margin-right: 30px
+				+media(smx)
+					margin-right: 0px
 			&:first-child
 				background-color: #0ba7eb
 				color: #fff
