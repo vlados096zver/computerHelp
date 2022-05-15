@@ -17,6 +17,15 @@
 			+media(mdx)
 				padding-bottom: 50px
 
+	&--content
+		.title
+			font-size: 40px
+			padding-bottom: 42px
+			+media(mdx)
+				font-size: 32px
+			+media(sm)
+				font-size: 25px
+
 	&__title
 		font-size: 64px
 		line-height: 1.2
@@ -38,12 +47,14 @@
 			font-size: 33px
 			line-height: 1.45
 			color: #000000
-			padding-bottom: 1em
 			+media(mdx)
 				font-size: 25px
-				padding-bottom: 1.2em
 			+media(sm)
 				font-size: 18px
+			&:not(:last-child)
+				padding-bottom: 1em
+				+media(mdx)
+					padding-bottom: 1.2em
 
 		hr
 			display: block
@@ -59,6 +70,7 @@
 		display: flex
 		justify-content: center
 		align-items: center	
+		padding-top: 15px
 		padding-bottom: 24px
 		border-bottom: 2px solid #0c8ac1
 		margin-bottom: 65px
@@ -79,3 +91,22 @@
 
 			&:hover
 				background-color: #43be66
+
+
+	&__elem
+		font-size: 128px
+		line-height: 1.4
+		color: #333333
+		text-align: center
+		padding-top: 100px
+		padding-bottom: 140px
+		font-weight: 800
+		+media(mdx)
+			font-size: 85px
+			padding-top: 40px
+			padding-bottom: 70px
+		+media(sm)
+			padding-top: 20px
+			padding-bottom: 40px
+		+media(smx)
+			font-size: 50px
