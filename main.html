@@ -534,11 +534,36 @@
      </section>
 
 
-     <div class="popup popup--text">
-       <div class="popup__text">
-         <p>text</p>
-       </div>
-     </div>
+    <section class="popup popup--consult  popop--active"> 
+      <div class="popup__wrap popup__wrap--consult"> 
+        <button class="popup__close"></button>
+        <p class="popup__title">Получить консультацию</p>
+        <form action="" class="popup__form">
+            <div class="user__block">
+                <div class="user__item">   
+                    <label for="p_name" class="label">*Введите имя</label>
+                    <input id="p_name" type="text" class="input">
+                    <p class="error user__error--name" style="display: none">Некорректный имя</p>
+                </div>
+                <div class="user__item">   
+                    <label for="p_phone" class="label">*Введите телефон</label>
+                    <input id="p_phone" type="text" class="input">
+                     <p class="error user__error--phone" style="display: none">Некорректный телефон</p>
+                </div>
+            </div>
+            <button id="p_consult" class="btn">Получить консультацию</button>
+          </form>
+      </div>
+    </section>
+
+    <section class="popup popup--learn"> 
+      <div class="popup__wrap popup__wrap--consult"> 
+        <button class="popup__close"></button>
+        <p class="popup__title">Получить консультацию</p>
+        вв
+      </div>
+    </section>
+
 
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/swiper-bundle.min.js"></script>

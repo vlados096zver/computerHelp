@@ -385,6 +385,53 @@ $(document).ready(function() {
   validate('#u_phone', 1, regName, '.user__error--phone');
   disBtn('#u_name , #u_phone', '#u_consult');
 
+  // popup reg 
+
+
+  $('#p_consult').on('click', function() {
+    popupConsult();
+  });
+
+  function popupConsult() {
+    let name = $('#p_name').val();
+    let phone = $('#p_phone').val();
+
+    validate('#p_name', 1, regName, '.popup .user__error--name');
+    validate('#p_phone', 1, regName, '.popup .user__error--phone');
+    disBtn('#p_name , #p_phone', '#p_consult');
+
+    valClick('#p_name', 1, regName, '.popup .user__error--name');
+    valClick('#p_phone', 1, regName, '.popup .user__error--phone');
+    let btn_bool = disBtnClick('#p_name, #p_phone', '#p_consult');
+
+    if (btn_bool) {
+      $.ajax({
+        url: myajax.url,
+        type: 'POST',
+        data: {
+          action: 'popup_reg',
+          name: name,
+          phone: phone
+        },
+      }).done(function(data) {
+        $('#p_name, #p_phone').val('').removeClass('form-done');
+        var text = 'Ваше  cообщение отправлено!';
+
+        $('.msg-modal').html(text).addClass('msg-modal-active');
+        setTimeout(function() {
+          $('.msg-modal').removeClass('msg-modal-active');
+        }, 2500);
+      });
+
+    }
+
+    return false;
+  }
+
+  validate('#p_name', 1, regName, '.popup .user__error--name');
+  validate('#p_phone', 1, regName, '.popup .user__error--phone');
+  disBtn('#p_name , #p_phone', '#p_consult');
+
   $(".tabs__item").click(function() {
     $(".tabs__item").removeClass("tabs__item--active").eq($(this).index()).addClass("tabs__item--active");
     var index = $(this).index();
@@ -546,5 +593,15 @@ $(document).ready(function() {
  $(document).on('click', '.files__close', function() {
   $('.files').slideToggle(0);
  })
+
+ $(document).on('click', '.btn--help, .info .btn--info', function(){
+   $('.popup--consult').addClass('popup--active');
+ })
+
+  $('body').on('click', function(e) {
+    if ($(e.target).is('.popup--consult, .popup__close')) {
+      $('.popup').removeClass('popup--active');
+    }
+  });
 
 })
