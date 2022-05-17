@@ -36,7 +36,7 @@
                           <a href="#" class="main-header__link">Компьютерная помощь</a>
                       </li>
                       <li>
-                          <a href="#" class="main-header__link">Обучение</a>
+                          <a href="#" id="m_learn" class="main-header__link">Обучение</a>
                       </li>
                       <li>
                           <a href="#" class="main-header__link">Полезная информация</a>
@@ -534,33 +534,43 @@
      </section>
 
 
-    <section class="popup popup--consult  popop--active"> 
+    <section class="popup popup--consult"> 
       <div class="popup__wrap popup__wrap--consult"> 
-        <button class="popup__close"></button>
-        <p class="popup__title">Получить консультацию</p>
-        <form action="" class="popup__form">
-            <div class="user__block">
-                <div class="user__item">   
-                    <label for="p_name" class="label">*Введите имя</label>
-                    <input id="p_name" type="text" class="input">
-                    <p class="error user__error--name" style="display: none">Некорректный имя</p>
-                </div>
-                <div class="user__item">   
-                    <label for="p_phone" class="label">*Введите телефон</label>
-                    <input id="p_phone" type="text" class="input">
-                     <p class="error user__error--phone" style="display: none">Некорректный телефон</p>
-                </div>
-            </div>
-            <button id="p_consult" class="btn">Получить консультацию</button>
-          </form>
+        <div class="popup__inner">
+          <button class="popup__close"></button>
+          <p class="popup__title">Получить консультацию</p>
+          <form action="" class="popup__form">
+              <div class="user__block">
+                  <div class="user__item">   
+                      <label for="p_name" class="label">*Введите имя</label>
+                      <input id="p_name" type="text" class="input">
+                      <p class="error user__error--name" style="display: none">Некорректный имя</p>
+                  </div>
+                  <div class="user__item">   
+                      <label for="p_phone" class="label">*Введите телефон</label>
+                      <input id="p_phone" type="text" class="input">
+                       <p class="error user__error--phone" style="display: none">Некорректный телефон</p>
+                  </div>
+              </div>
+              <button id="p_consult" class="btn">Получить консультацию</button>
+            </form>
+        </div>
       </div>
     </section>
 
     <section class="popup popup--learn"> 
-      <div class="popup__wrap popup__wrap--consult"> 
-        <button class="popup__close"></button>
-        <p class="popup__title">Получить консультацию</p>
-        вв
+      <div class="popup__wrap popup__wrap--learn"> 
+        <div class="popup__inner">
+          <button class="popup__close"></button>
+          <p class="popup__title">Обучение новичков</p>
+          <div class="popup__text">
+            <img src="img/bg-learn.png">
+            <p>При заказе компьютерной поддержки на 6 мес. и более бесплатно обучаем работе с компьютером, программами, пользованием Интернетом, мессенджерами, видеозвонками и многому другому!</p>
+            <p>“Подробнее” предлагаю реализовать разворачиванием текста. В каждой “услуге” 1-е предложение делаем в видимой области, всё остальное можно скрыть. Хотя нужно увидеть, как оно получится.
+  Думаю, само слово “Подробнее” можно не выделять  голубым, а сделать по образцу, как гиперссылка, нижним подчеркиванием обычного текста. А вот название “услуг” можно выделить голубым.</p>
+          </div>
+          <button class="btn btn--info">Заказать консультацию</button>
+        </div>
       </div>
     </section>
 

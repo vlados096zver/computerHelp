@@ -3,18 +3,29 @@
 .course
 	padding-top: 52px	
 	margin-bottom: 75px
+
+	&__holder
+		position: relative
+
 	&__wrap
 		margin-top: 45px	
+		margin-bottom: 65px
 
 	&__box
 		display: flex
+		flex-wrap: wrap
 		background-image: linear-gradient(90deg, rgba(192, 14, 121, 0.76) 0%, rgba(219, 16, 237, 0.5404) 100%)
 		border-radius: 50px
 		padding: 80px
+		+media(lgs)
+			padding: 40px
 
 	&__content
 		width: calc(100% - 350px)
 		padding-right: 40px
+		+media(mdx)
+			width: 100%
+			padding-right: 0px
 
 	&__title
 		font-size: 36px
@@ -32,3 +43,7 @@
 
 	&__image
 		width: 350px
+		+media(mdx)
+			order: -1
+			width: 100%
+			margin-bottom: 25px

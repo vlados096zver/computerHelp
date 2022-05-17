@@ -495,6 +495,21 @@ $(document).ready(function() {
       }
     });
 
+      let course_swiper = new Swiper(".course__wrap", {
+      slidesPerView: 1,
+      spaceBetween: 40,
+      pagination: {
+        clickable: true,
+        el: ".course__holder .swiper-pagination",
+      },
+      navigation: {
+        nextEl: ".course__holder .swiper-button-next",
+        prevEl: ".course__holder .swiper-button-prev",
+      },
+      allowTouchMove: true,
+      loop: false,
+    });
+
   }
 
   $(document).on('click', '.mobile-wrap', function() {
@@ -594,7 +609,7 @@ $(document).ready(function() {
   $('.files').slideToggle(0);
  })
 
- $(document).on('click', '.btn--help, .info .btn--info', function(){
+ $(document).on('click', '.btn--help, .info .btn--info, .btn--course', function(){
    $('.popup--consult').addClass('popup--active');
  })
 
@@ -603,5 +618,10 @@ $(document).ready(function() {
       $('.popup').removeClass('popup--active');
     }
   });
+
+  $(document).on('click', '#m_learn', function(e){
+    e.preventDefault();
+   $('.popup--learn').addClass('popup--active');
+ })
 
 })
