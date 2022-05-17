@@ -1,0 +1,60 @@
+@import 'responsive'
+
+.point
+	background-color: #43be66
+	padding-top: 120px
+	padding-bottom: 90px
+	+media(mdx)
+		padding-top: 70px
+		padding-bottom: 50px
+
+	&__block
+		display: flex
+		flex-wrap: wrap
+		padding-top: 100px
+		margin: 0 -20px
+		+media(mdx)
+			padding-top: 80px
+			margin: 0px
+
+	&__box
+		display: flex
+		width: calc(100% / 2 - 40px)
+		margin: 0 20px
+		margin-bottom: 50px
+		+media(mdx)
+			width: 100%
+			margin: 0px
+			margin-bottom: 45px
+
+	&__image
+		display: flex
+		align-items: center
+		justify-content: center
+		width: 60px
+		height: 60px
+		background: rgba(255, 255, 255, 0.58)
+		border-radius: 10px
+		img
+			display: block
+
+	&__content
+		width: calc(100% - 60px)
+		padding-left: 22px
+
+	&__title
+		font-size: 20px
+		line-height: 1.2
+		color: #fff
+		padding-bottom: 7px
+		font-weight: 700
+		+media(mdx)
+			font-size: 18px
+
+	&__text
+		p
+			font-size: 20px
+			line-height: 1.5
+			color: #fff
+			+media(mdx)
+				font-size: 18px

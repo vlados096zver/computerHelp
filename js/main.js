@@ -395,7 +395,7 @@ $(document).ready(function() {
 
     let services_swiper = new Swiper(".services__wrap", {
       slidesPerView: 1,
-      spaceBetween: 24,
+      spaceBetween: 40,
       pagination: {
         clickable: true,
         el: ".services__holder .swiper-pagination",
@@ -424,7 +424,7 @@ $(document).ready(function() {
 
     let reviews_swiper = new Swiper(".reviews__wrap", {
       slidesPerView: 1,
-      spaceBetween: 24,
+      spaceBetween: 40,
       pagination: {
         clickable: true,
         el: ".reviews__holder .swiper-pagination",
@@ -543,5 +543,8 @@ $(document).ready(function() {
     $('.popup__text p').text(desc);
   })
 
+ $(document).on('click', '.files__close', function() {
+  $('.files').slideToggle(0);
+ })
 
 })
