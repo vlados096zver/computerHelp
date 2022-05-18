@@ -1,0 +1,67 @@
+@import 'responsive'
+
+.total
+	padding-top: 85px
+	padding-bottom: 260px	
+	+media(lgs)
+		padding-bottom: 200px	
+	+media(mdx)
+		padding-top: 70px	
+		padding-bottom: 100px	
+	&__wrap
+		display: flex	
+		flex-wrap: wrap
+		padding-top: 100px	
+		+media(mdx)
+			padding-top: 55px	
+
+	&__item
+		width: 50%
+		+media(mdx)
+			width: 100%
+		&--image
+			position: relative
+			+media(lgs)
+				align-self: baseline
+			+media(mdx)
+				margin-bottom: 25px	
+			&:after
+				position: absolute
+				content: ' '
+				bottom: 0px
+				left: 0px
+				width: 100%
+				height: 265px	
+				background: linear-gradient(0deg, #43be66 33.32%, rgba(11, 167, 235, 0) 100%)
+				+media(mdx)
+					display: none	
+
+		&--content
+			padding-left: 40px	
+
+	&__block
+		padding-bottom: 95px	
+		+media(mdx)
+			padding-bottom: 50px	
+
+	&__image
+		width: 60px
+		height: 60px
+		display: flex	
+		align-items: center
+		justify-content: center
+		background-color: rgba(67, 190, 102, 0.58)
+		border-radius: 10px
+		img
+			display: block	
+
+	&__inner
+		display: flex	
+		align-items: center
+		margin-bottom: 25px	
+
+	&__title
+		width: calc(100% - 60px)
+		font-size: 20px	
+		padding-left: 22px
+		font-weight: 700	

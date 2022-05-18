@@ -4,21 +4,21 @@
 	position: fixed
 	bottom: 0px
 	right: 0px
-	max-width: 500px
+	display: flex	
+	max-width: 600px
 	width: 100%	
-	background-color: #fff
-	padding: 44px 20px
+	padding: 0px 20px
+	padding-top: 0px	
 
 	&__close
 		cursor: pointer
-		position: absolute
-		top: 0px
-		left: -60px
+		position: relative
 		width: 60px	
 		height: 60px
 		background-color: #fff
 		border: none
 		outline: none
+		padding: 0px
 		&:after
 			position: absolute
 			content: ' '
@@ -32,6 +32,9 @@
 			transition: 0.3s border
 
 	&__wrap
+		width: calc(100% - 60px)
+		background-color: #fff
+		padding: 44px 0
 		li:not(:last-child)
 			margin-bottom: 24px
 

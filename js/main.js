@@ -432,6 +432,54 @@ $(document).ready(function() {
   validate('#p_phone', 1, regName, '.popup .user__error--phone');
   disBtn('#p_name , #p_phone', '#p_consult');
 
+// popup reg 
+
+
+  $('#i_consult').on('click', function() {
+    infoConsult();
+  });
+
+  function infoConsult() {
+    let name = $('#i_name').val();
+    let phone = $('#i_phone').val();
+
+    validate('#i_name', 1, regName, '.info .user__error--name');
+    validate('#i_phone', 1, regName, '.info .user__error--phone');
+    disBtn('#i_name , #i_phone', '#i_consult');
+
+    valClick('#i_name', 1, regName, '.info .user__error--name');
+    valClick('#i_phone', 1, regName, '.info .user__error--phone');
+    let btn_bool = disBtnClick('#i_name, #i_phone', '#i_consult');
+
+    if (btn_bool) {
+      $.ajax({
+        url: myajax.url,
+        type: 'POST',
+        data: {
+          action: 'popup_reg',
+          name: name,
+          phone: phone
+        },
+      }).done(function(data) {
+        $('#i_name, #i_phone').val('').removeClass('form-done');
+        var text = 'Ваше  cообщение отправлено!';
+
+        $('.msg-modal').html(text).addClass('msg-modal-active');
+        setTimeout(function() {
+          $('.msg-modal').removeClass('msg-modal-active');
+        }, 2500);
+      });
+
+    }
+
+    return false;
+  }
+
+  validate('#i_name', 1, regName, '.info .user__error--name');
+  validate('#i_phone', 1, regName, '.info .user__error--phone');
+  disBtn('#i_name , #i_phone', '#i_consult');
+
+
   $(".tabs__item").click(function() {
     $(".tabs__item").removeClass("tabs__item--active").eq($(this).index()).addClass("tabs__item--active");
     var index = $(this).index();
@@ -598,23 +646,23 @@ $(document).ready(function() {
 
   $(document).on('click', '.reviews__details', function(e) {
     e.preventDefault();
-    $('.popup--text').addClass('popup--active');
     let parent = $(this).parents('.reviews__item');
     let desc = parent.find('.reviews__text p').text();
     console.log(desc);
     $('.popup__text p').text(desc);
+     $('.popup--reviews').addClass('popup--active');
   })
 
  $(document).on('click', '.files__close', function() {
-  $('.files').slideToggle(0);
+  $('.files__wrap').slideToggle(0);
  })
 
- $(document).on('click', '.btn--help, .info .btn--info, .btn--course', function(){
+ $(document).on('click', '.btn--help, .info .btn--info, .btn--course, .btn--total', function(){
    $('.popup--consult').addClass('popup--active');
  })
 
   $('body').on('click', function(e) {
-    if ($(e.target).is('.popup--consult, .popup__close')) {
+    if ($(e.target).is('.popup--consult, .popup--learn, .popup__close')) {
       $('.popup').removeClass('popup--active');
     }
   });

@@ -43,7 +43,46 @@
 
 	&__text
 		padding-bottom: 116px
+		+media(mdx)
+			padding-bottom: 70px	
 		p
 			font-size: 20px
 			line-height: 1.6
 			color: #fff
+
+	&__row
+		position: relative
+		z-index: 2
+		display: flex	
+		flex-wrap: wrap
+		padding-top: 200px
+		padding-bottom: 11px	
+		+media(mdx)
+			padding-top: 100px	
+
+	&__col
+		&--aside
+			width: 400px
+			align-self: baseline
+			background-color: #ffffff
+			box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.15)
+			border-radius: 20px
+			padding: 30px 40px
+			padding-bottom: 24px
+			+media(mdx)
+				max-width: 400px
+				width: 100%	
+				margin: 0 auto	
+				padding: 30px 20px
+			.user__title
+				text-align: center
+
+		&--content
+			width: calc(100% - 400px)
+			padding-right: 40px	
+			+media(mdx)
+				width: 100%	
+				padding-right: 0px	
+
+
+
