@@ -1433,7 +1433,7 @@ img {
 	line-height: 1.2;
 	color: #0ba7eb;
 	border: none;
-	background-color: #fff;
+	background-color: transparent;
 	padding: 0px;
 	font-weight: 700;
 }
