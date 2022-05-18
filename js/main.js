@@ -662,7 +662,7 @@ $(document).ready(function() {
  })
 
   $('body').on('click', function(e) {
-    if ($(e.target).is('.popup--consult, .popup--learn, .popup__close')) {
+    if ($(e.target).is('.popup--consult, .popup--learn, .popup--reviews, .popup__close')) {
       $('.popup').removeClass('popup--active');
     }
   });
